@@ -49,7 +49,7 @@ anim4 <- ggplot(new_df,aes(Year, Total,color=County)) +
   facet_wrap(~County)+
   transition_reveal(Year)
 anim4
-#==========================================================================================
+#========================================================================================================================================
 #Getting all Crime Types 
 #From tall to long format
 
@@ -75,7 +75,7 @@ a$id <- as.factor(a$id) #Converting data into factor
     labs(title = 'Crime Types in 4 boroughs', x = 'Year', y = 'Total Crime')
     #shadow_wake(wake_length = 0.5)
   
-#=========================================================================================
+#=========================================================================================================================================
 #Combining two data sets
 #Data Set 2 : 'Unemployment Dataset"
     
@@ -113,7 +113,7 @@ names(new_df3)[names(new_df3) == 'sum(Unemployed)'] <- 'Sum_Unemployed'
 #Log Transformation of Total Crime and Unemployment between 1990-2017
 new_df3['log_total']<-log10(new_df3$Total)
 new_df3['log_unemp']<-log10(new_df3$Sum_Unemployed)
-#=======================================================================================
+#========================================================================================================================================
 #Final Plotting
 
 ggplot(new_df3, aes(Year.x, log_unemp,color=County.x))+
