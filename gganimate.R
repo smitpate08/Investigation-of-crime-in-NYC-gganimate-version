@@ -4,7 +4,6 @@ library(dplyr)
 library(tidyverse)
 library(reshape2)
 
-
 #Reading Dataset 1
 #This Dataset containg crimes in NY between 1970-2017
 df<-read.csv('adult.csv')
@@ -13,13 +12,14 @@ df<-read.csv('adult.csv')
 new_df<-filter(df,County=='Bronx'|County=='Kings'|County=='Queens'|County=='New York')
 
 #Basic plot of Total Crimes in 4 boroughs, Size representing Crimes
-ggplot(new_df, aes(County, Total, size =Total, colour = County)) +
+anim1<-ggplot(new_df, aes(County, Total, size =Total, colour = County)) +
   geom_point(alpha = 0.7, show.legend = FALSE) +
  #scale_colour_manual(values = county_colors) +
   scale_size(range = c(2, 12)) +
   labs(title = 'Year: {frame_time}', x = 'County', y = 'Total Crime') +
   transition_time(Year)+
   ease_aes('linear')
+anim1
 
 #Scatter plot of Total crimes in 4 boroughs
 #red Dot as lead
@@ -57,15 +57,15 @@ a<-new_df %>% tidyr::gather("id", "value", 4:13)
 a$id <- as.factor(a$id) #Converting data into factor
 
 #All Crime Types in 4 Boroughs
-  ggplot(a, aes(Year, Total,color=County))+
+anim5<-  ggplot(a, aes(Year, Total,color=County))+
   #geom_line() +
   geom_point(aes(Year,value,group = seq_along(id))) +
   geom_line(aes(Year,value)) +
   facet_wrap(~id)+
   transition_reveal(Year)
-
+anim5
  # Facetted crime Types in 4 boroughs
-    ggplot(a, aes(Year, Total,color=id))+
+anim6<-ggplot(a, aes(Year, Total,color=id))+
     #geom_line() +
     geom_point(aes(Year,value,group = seq_along(id))) +
     geom_line(aes(Year,value))+
@@ -74,7 +74,7 @@ a$id <- as.factor(a$id) #Converting data into factor
     transition_reveal(Year)+
     labs(title = 'Crime Types in 4 boroughs', x = 'Year', y = 'Total Crime')
     #shadow_wake(wake_length = 0.5)
-  
+anim6
 #=========================================================================================================================================
 #Combining two data sets
 #Data Set 2 : 'Unemployment Dataset"
@@ -116,7 +116,7 @@ new_df3['log_unemp']<-log10(new_df3$Sum_Unemployed)
 #========================================================================================================================================
 #Final Plotting
 
-ggplot(new_df3, aes(Year.x, log_unemp,color=County.x))+
+anim7<-ggplot(new_df3, aes(Year.x, log_unemp,color=County.x))+
   #geom_line() +
   geom_point(aes(group = seq_along(County.x))) +
   geom_line()+
@@ -129,3 +129,4 @@ ggplot(new_df3, aes(Year.x, log_unemp,color=County.x))+
   labs(title = 'Unemployment & Crimes in 4 Boroughs between 1990-2017',subtitle = 'Top line = Unemployment, Bottom line =Total Crime', x = 'Year', y = 'Unemployment (Log Transformed)',color='Boroughs')+
   ease_aes('linear')
 #shadow_wake(wake_length = 0.5)
+anim7
