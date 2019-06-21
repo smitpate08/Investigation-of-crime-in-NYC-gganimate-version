@@ -23,3 +23,8 @@ Since, the dataset contained different types of crimes such as felony,Drug, DWI 
 ![anim5](https://user-images.githubusercontent.com/29586703/59888882-b525aa00-9397-11e9-8f08-bde9442ab11d.gif)
 
 Form the above animation it is very hard to detect any trend. Thus, it was decided to plot facetted plot of 4 broughs and all crimes.
+
+![anim6](https://user-images.githubusercontent.com/29586703/59888989-409f3b00-9398-11e9-95f8-8c85e1dd6b04.gif)
+
+Finally, the Employment data was mereged with total crimes dataset. For the below animation, Year between 1990-2017 were subsetted from both dataset becasue the second dataset did not contain sufficent data for those 4 boroughs. Additionally, log transformation was performed for both the dataset, this was done to normalize the dataset.
+
