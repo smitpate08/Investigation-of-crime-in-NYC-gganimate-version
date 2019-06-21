@@ -1,7 +1,7 @@
 # Investigation of Crimes in NYC (gganimate version)
 
 ## Introduction:
-The `Altair` version of the analysis can be found [here](https://www.kaggle.com/apnanaam08/investigation-of-crimes-in-ny-using-altair-library)  & [here](https://www.kaggle.com/apnanaam08/crimes-in-ny-using-altair-library-p2). The objective of this `github` repo was to explore the functionality of `gganmiate` in R. The dataset used in this analysis are also available in 'Data' folder of the repository. File titled as "adult" contains data about the total number of crimes in NYC between 1970-2017. 
+The `Altair` version of the analysis can be found [here](https://www.kaggle.com/apnanaam08/investigation-of-crimes-in-ny-using-altair-library)  & [here](https://www.kaggle.com/apnanaam08/crimes-in-ny-using-altair-library-p2). The objective of this `github` repo was to explore  and learn the functionality of `gganmiate` in R. The dataset used in this analysis are also available in 'Data' folder of the repository. File titled as "adult" contains data about the total number of crimes in NYC between 1970-2017. 
 The File titled as "nyjob1" contains data about the employment history of various counties in NYC between 1976-2018.
 ## Analysis
 From `Altair` version of the analysis, it was noticed that 4 boroughs with highest crime were Bronx , Kings, Queens and New York City.
@@ -27,4 +27,10 @@ Form the above animation it is very hard to detect any trend. Thus, it was decid
 ![anim6](https://user-images.githubusercontent.com/29586703/59888989-409f3b00-9398-11e9-95f8-8c85e1dd6b04.gif)
 
 Finally, the Employment data was mereged with total crimes dataset. For the below animation, Year between 1990-2017 were subsetted from both dataset becasue the second dataset did not contain sufficent data for those 4 boroughs. Additionally, log transformation was performed for both the dataset, this was done to normalize the dataset.
+![anim7](https://user-images.githubusercontent.com/29586703/59889217-55c89980-9399-11e9-94d9-154d5e55e78e.gif)
 
+## Results
+ Eventhough Unemplolyment rate was high during 1990's in 4 boroughs, the crime rate was much lower (similar conclusion was obtained in `Altair` version too) Thus, there can be other factors such as Poverty, Eduction, and Population demographics that might have caused increase in crimes in NYC during 1990's.
+ 
+## What's next ?
+Find dataset that involves population demographics and try to correlate with crime dataset.
