@@ -13,4 +13,7 @@ Next, It was decided to plot linechart where Year can be on X-axis and Total Cri
 ![anim2](https://user-images.githubusercontent.com/29586703/59888352-3b8cbc80-9395-11e9-9f6d-da998bcb7a21.gif)
 
 From above animation it is very hard to see which line represents which borough's crime. So the `color` of the lines/dots were changed using `color` functionality available in `ggplot2`.
+![anim3](https://user-images.githubusercontent.com/29586703/59888476-f1f0a180-9395-11e9-89c8-5c9f09faec7f.gif)
+
+Next, `facet_wrap` function was used to plot total crimes in each 4 borough separately. Below animation displays the output.
 
