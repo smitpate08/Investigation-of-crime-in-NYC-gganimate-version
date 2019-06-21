@@ -17,3 +17,7 @@ From above animation it is very hard to see which line represents which borough'
 
 Next, `facet_wrap` function was used to plot total crimes in each 4 borough separately. Below animation displays the output.
 
+![anim4](https://user-images.githubusercontent.com/29586703/59888588-72170700-9396-11e9-880e-94cf06ec386f.gif)
+
+Since, the dataset contained different types of crimes such as felony,Drug, DWI and other Misdemeanor. It was decided to plot all crimes in facetted plots for all 4 boroughs, and see if any visible trend can be find.
+
